@@ -39,8 +39,8 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 # Bluetooth configuration files
-PRODUCT_COPY_FILES += \
-    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
+#PRODUCT_COPY_FILES += \
+#    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -119,7 +119,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
     ro.zygote.disable_gl_preload=true \
-    ro.bq.gpu_to_cpu_unsupported=true \
+    ro.bq.gpu_to_cpu_unsupported=1 \
     debug.hwui.render_dirty_regions=false
 
 # RIL
@@ -128,6 +128,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.call_ring.delay=3000
+
+# Disable SELinux
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.selinux=disabled
+
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
