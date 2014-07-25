@@ -64,6 +64,7 @@ PRODUCT_PACKAGES := \
 PRODUCT_PACKAGES += \
     AdvancedDisplay \
     audio.primary.exynos4 \
+    audio.r_submix.default \
     audio.a2dp.default \
     audio.usb.default \
     libaudiohw_legacy
