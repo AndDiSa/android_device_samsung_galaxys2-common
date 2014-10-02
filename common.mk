@@ -66,6 +66,7 @@ PRODUCT_PACKAGES += \
     audio.primary.exynos4 \
     audio.r_submix.default \
     audio.a2dp.default \
+    audio.r_submix.default \
     audio.usb.default \
     libaudiohw_legacy
 
