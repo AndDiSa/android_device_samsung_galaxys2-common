@@ -18,7 +18,7 @@ COMMON_PATH := device/samsung/galaxys2-common
 DEVICE_PACKAGE_OVERLAYS := $(COMMON_PATH)/overlay
 
 # Rootdir
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/fstab.smdk4210:root/fstab.smdk4210 \
     $(COMMON_PATH)/rootdir/lpm.rc:root/lpm.rc \
     $(COMMON_PATH)/rootdir/init.smdk4210.usb.rc:root/init.smdk4210.usb.rc \
@@ -37,6 +37,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/tinyalsa-audio.xml:system/etc/tinyalsa-audio.xml \
     $(COMMON_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+
+# Bluetooth configuration files
+#PRODUCT_COPY_FILES += \
+#    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
 
 # Wifi
 PRODUCT_COPY_FILES += \
