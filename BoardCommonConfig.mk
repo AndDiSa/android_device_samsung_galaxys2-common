@@ -142,6 +142,7 @@ BOARD_SEPOLICY_DIRS += \
     device/samsung/galaxys2-common/selinux
 
 BOARD_SEPOLICY_UNION += \
+    app.te \
     device.te \
     drmserver.te \
     ueventd.te \
@@ -150,6 +151,10 @@ BOARD_SEPOLICY_UNION += \
     file_contexts \
     rild.te \
     vold.te
+
+BOARD_SEPOLICY_REPLACE += \
+    domain.te \
+    app.te
 
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/galaxys2-common/recovery/recovery_keys.c
