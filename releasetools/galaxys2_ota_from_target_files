@@ -88,8 +88,8 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   CopyBootFiles(input_zip, output_zip)
 
-  Item.GetMetadata(input_zip)
-  Item.Get("system").SetPermissions(script)
+  system_items.GetMetadata(input_zip)
+  system_items.Get("system").SetPermissions(script)
 
   script.ShowProgress(0.2, 0)
 
